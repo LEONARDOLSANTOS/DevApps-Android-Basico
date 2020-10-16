@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="personagens">
+        <item>@drawable/aang</item>
+        <item>@drawable/appa</item>
+        <item>@drawable/katara</item>
+        <item>@drawable/sokka</item>
+        <item>@drawable/zuko</item>
+    </array>
+</resources>
