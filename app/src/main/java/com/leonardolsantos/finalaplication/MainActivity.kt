@@ -1,5 +1,6 @@
 package com.leonardolsantos.finalaplication
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,10 @@ import com.leonardolsantos.finalaplication.model.Personagem
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        const val NOVO_PERSONAGEM = 1
+        const val ALTERAR_PERSONAGEM = 2
+    }
     private val arrayPersonagens =  mutableListOf(
         Personagem("Aang",0,  108)
     )
@@ -20,11 +25,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupRecyclerview()
-        setupInsertButton()
         floatingActionButtonAdiciona.setOnClickListener {
             val telaCadastro = Intent(this, MainActivity2::class.java)
-            startActivity(telaCadastro)
+            startActivityForResult(telaCadastro, NOVO_PERSONAGEM)
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        var nome = data?.getStringExtra("nome")
+        var avatar = data?.getIntExtra("avatar",0)
+        var idade = data?.getIntExtra("idade",0)
+        if(requestCode == NOVO_PERSONAGEM && resultCode == Activity.RESULT_OK){
+            if(nome!= null && avatar!=null && idade!=null){
+                arrayPersonagens.add(0,Personagem(nome, avatar,idade))
+                mPersonagemAdapter.notifyItemInserted(0)
+            }
+        }
+
     }
 
     private fun setupRecyclerview() {
@@ -38,25 +57,11 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
     }
 
-
-    private fun setupInsertButton() {
-        button.setOnClickListener {
-            val name = editTextTextPersonName.text.toString()
-            arrayPersonagens.add(0,Personagem(name, (0..4).random(),0))
-            mPersonagemAdapter.notifyItemInserted(0)
-            editTextTextPersonName.text.clear()
-            editTextTextPersonName.clearFocus()
-        }
-    }
-
     private fun onPersonagemClickListener(personagem: Personagem) {
         Toast.makeText(this, "Personagem: ${personagem.nome} Avatar: ${personagem.avatar}",
             Toast.LENGTH_SHORT).show()
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        Toast.makeText(this, "Retornou", Toast.LENGTH_SHORT).show()
-    }
+
 
 }

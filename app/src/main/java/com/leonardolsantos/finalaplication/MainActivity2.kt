@@ -24,10 +24,9 @@ class MainActivity2 : AppCompatActivity() {
 
     private fun trataButtonSalvar() {
         buttonSalvar.setOnClickListener {
-            var nome = editNome.text.toString()
-            var avatar = 0
-            var idade = editIdade.text.toString().toInt();
-
+            val nome = editNome.text.toString()
+            val avatar = 0
+            val idade = editIdade.text.toString().toInt();
             intent.putExtra("nome", nome )
             intent.putExtra("avatar", avatar )
             intent.putExtra("idade", idade )

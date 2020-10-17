@@ -2,4 +2,6 @@
     <string name="app_name">RPG Aang - The last airbend</string>
     <string name="adiciona">Adiciona</string>
     <string name="editar">EDITAR</string>
+    <string name="tela1_titulo">A Lenda de Aang</string>
+    <string name="tela1_botao_adicionar">Adiciona Novo Persionagem</string>
 </resources>

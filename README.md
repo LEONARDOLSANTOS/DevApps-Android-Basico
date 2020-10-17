@@ -1,8 +1,7 @@
 # DevApps-Android-Basico
-**Projeto disciplina Android Basico**
+# Projeto disciplina Android Basico
 
-Escopo:
-----
+## Escopo:
 **1** - Criar uma aplicação com uma tela inicial com uma RecyclerView que vai listar os elementos de um objeto List<Classe>  
 **2** - Adicionar um float button  
 **2.1** - que vai abrir uma segunda activity em modo inserção com os campos necessário para criar um objeto da sua classe  
@@ -13,12 +12,12 @@ Escopo:
 **4** - Como ainda estamos trabalhando com os dados na memória, a aplicação deve controlar o ciclo de vida da activity salvando os dados ao girar a tela.  
 **5** - Façam o upload do seu projeto em um repositório do github e compartilhem o link comigo até o dia 16/10
 
-**Feito ate as 16/10 - 09:00**
-----
+## Feito ate as 16/10 - 21:00
 1 - ok  
 2 - ok  
 2.1 - ok  
-2.2 - em andamento  
-3 -  
+2.2 - ok  
+3 - em andamento  
 4 -  
-5 - ok  
+5 - ok
+
