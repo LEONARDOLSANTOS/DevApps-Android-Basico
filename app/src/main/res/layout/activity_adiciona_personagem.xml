@@ -99,7 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbKatara"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
@@ -108,36 +108,36 @@
             app:layout_constraintTop_toBottomOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbAang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Aang"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+            app:layout_constraintTop_toBottomOf="@+id/rbKatara" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rbAppa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Appa"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+            app:layout_constraintTop_toBottomOf="@+id/rbAang" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/rbZukko"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Zukko"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
+            app:layout_constraintTop_toBottomOf="@+id/rbAppa" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/rbSokka"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sokka"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
+            app:layout_constraintTop_toBottomOf="@+id/rbZukko" />
 
     </RadioGroup>
 

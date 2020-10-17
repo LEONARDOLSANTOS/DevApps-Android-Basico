@@ -25,7 +25,21 @@ class MainActivity2 : AppCompatActivity() {
     private fun trataButtonSalvar() {
         buttonSalvar.setOnClickListener {
             val nome = editNome.text.toString()
-            val avatar = 0
+            val idRadio = radioGroup.checkedRadioButtonId
+            val valor = resources.getResourceEntryName(idRadio)
+            var avatar = -1
+            if (valor=="rbAang"){
+                avatar = 0
+            }else if(valor=="rbAppa"){
+                avatar = 1
+            }else if(valor=="rbKatara"){
+                avatar = 2
+            }else if(valor=="rbSokka"){
+                avatar = 3
+            }else {
+                avatar = 4
+            }
+
             val idade = editIdade.text.toString().toInt();
             intent.putExtra("nome", nome )
             intent.putExtra("avatar", avatar )
